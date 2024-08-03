@@ -17,7 +17,6 @@ load_dotenv()  # Load environment variables from .env
 if "GOOGLE_API_KEY" not in os.environ:
     raise EnvironmentError("GOOGLE_API_KEY not found in environment variables.")
 
-
 def get_few_shot_db_chain():
     db_user = "root"
     db_password = "123456"
@@ -28,8 +27,8 @@ def get_few_shot_db_chain():
     db_uri = f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}"
     db = SQLDatabase.from_uri(db_uri, sample_rows_in_table_info=3)
 
-    # Initialize the language model
-    llm = GooglePalm(google_api_key=os.environ["GOOGLE_API_KEY"], temperature=0.1)
+    # Initialize the language model with API key from environment variable
+    llm = GooglePalm(api_key=os.environ["GOOGLE_API_KEY"], temperature=0.1)
 
     # Initialize embeddings and vectorstore
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
