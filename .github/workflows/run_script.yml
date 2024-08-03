@@ -28,4 +28,4 @@ jobs:
       env:
         GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
       run: |
-        python main.py
+        python langchain_helper.py
