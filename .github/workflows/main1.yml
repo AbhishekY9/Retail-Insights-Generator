@@ -1,0 +1,5 @@
+- name: Run script
+  env:
+    GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+  run: |
+    python scripts/your_script.py
