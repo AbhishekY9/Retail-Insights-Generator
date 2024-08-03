@@ -26,9 +26,10 @@ def get_few_shot_db_chain():
     # Connect to the database
     db_uri = f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}"
     db = SQLDatabase.from_uri(db_uri, sample_rows_in_table_info=3)
+    api_key = os.getenv('GOOGLE_API_KEY')
 
     # Initialize the language model with API key from environment variable
-    llm = GooglePalm(api_key=os.environ["GOOGLE_API_KEY"], temperature=0.1)
+    llm = GooglePalm(api_key=api_key, temperature=0.1)
 
     # Initialize embeddings and vectorstore
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
