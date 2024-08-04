@@ -17,10 +17,10 @@ load_dotenv()
 
 # Ensure the environment variables are loaded
 google_api_key = os.getenv("GOOGLE_API_KEY")
-db_user = os.getenv("MYSQL_DB_USER")
-db_password = os.getenv("MYSQL_DB_PASSWORD")
-db_host = os.getenv("MYSQL_DB_HOST")
-db_name = os.getenv("MYSQL_DB_NAME")
+db_user = "sql12723901"
+db_password = "YsCnmTnKLW"
+db_host = "sql12.freesqldatabase.com"
+db_name = "sql12723901"
 
 if not google_api_key or not db_user or not db_password or not db_host or not db_name:
     st.error("Environment variables not found.")
