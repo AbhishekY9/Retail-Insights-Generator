@@ -1,5 +1,6 @@
 import streamlit as st
 from langchain_helper import get_few_shot_db_chain
+import sqlite3
 
 st.markdown(
     """
