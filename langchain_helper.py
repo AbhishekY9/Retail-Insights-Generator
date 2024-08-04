@@ -10,6 +10,7 @@ from langchain.prompts.prompt import PromptTemplate
 from few_shots import few_shots
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()  # Load environment variables from .env
 
