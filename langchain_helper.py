@@ -12,7 +12,8 @@ from few_shots import few_shots
 import os
 from dotenv import load_dotenv
 
-load_dotenv()  # Load environment variables from .env
+# Load environment variables from .env file
+load_dotenv()
 
 # Ensure the environment variable is loaded
 google_api_key = os.getenv("GOOGLE_API_KEY")
