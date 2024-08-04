@@ -11,3 +11,4 @@ sentence-transformers
 chromadb>=0.4.0 
 google-generativeai
 chroma
+sqlite3 
