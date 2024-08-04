@@ -7,8 +7,6 @@ from langchain.vectorstores import Chroma
 from langchain.prompts import FewShotPromptTemplate
 from langchain.chains.sql_database.prompt import PROMPT_SUFFIX, _mysql_prompt
 from langchain.prompts.prompt import PromptTemplate
-import sqlite3
-
 from few_shots import few_shots
 
 import os
