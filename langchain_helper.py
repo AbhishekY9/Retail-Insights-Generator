@@ -1,4 +1,4 @@
-from langchain.llms import GooglePalm
+from langchain_community.llms import GooglePalm
 from langchain.utilities import SQLDatabase
 from langchain_experimental.sql import SQLDatabaseChain
 from langchain.prompts import SemanticSimilarityExampleSelector
