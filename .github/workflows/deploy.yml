@@ -30,7 +30,6 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install tiktoken
-          pip install faiss-cpu  # Reattempt installing faiss-cpu
           pip install -r requirements.txt
 
       - name: Run Streamlit App
