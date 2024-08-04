@@ -11,3 +11,4 @@ sentence-transformers
 chromadb==0.5.5
 google-generativeai
 chroma==0.1.0
+langchain_community
