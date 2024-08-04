@@ -7,3 +7,4 @@ langchain-experimental
 huggingface-hub
 chromadb
 python-dotenv
+pymysql
