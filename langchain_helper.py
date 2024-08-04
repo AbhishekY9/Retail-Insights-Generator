@@ -11,6 +11,7 @@ from few_shots import few_shots
 import os
 from dotenv import load_dotenv
 import streamlit as st
+import sqlite3
 
 load_dotenv()  # Load environment variables from .env
 
