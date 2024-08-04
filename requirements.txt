@@ -13,3 +13,4 @@ tiktoken
 protobuf
 mysql-connector-python
 google-generativeai
+pysqlite3
