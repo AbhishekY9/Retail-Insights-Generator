@@ -59,7 +59,7 @@ def get_few_shot_db_chain():
 
     No pre-amble.
     """
-
+    st.write('Hello')
     # Define the example prompt
     example_prompt = PromptTemplate(
         input_variables=["Question", "SQLQuery", "SQLResult", "Answer"],
