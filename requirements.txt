@@ -1,7 +1,7 @@
-langchain==0.0.282  # Compatible version based on constraints
-langchain-core==0.2.26  # Compatible version based on constraints
-langchain-community==0.0.1  # Ensure compatibility
-langchain-experimental==0.0.1  # Ensure compatibility
+langchain==0.0.284  # Use a version that is available
+langchain-core==0.2.28  # Ensure compatibility with langchain
+langchain-community==0.0.1
+langchain-experimental==0.0.1
 huggingface-hub
 chromadb
 google-generativeai
