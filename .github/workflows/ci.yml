@@ -13,7 +13,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.12'  # Updated to Python 3.12
+        python-version: '3.9'  # Using Python 3.9
 
     - name: Install system dependencies
       run: |
@@ -40,5 +40,5 @@ jobs:
       run: |
         pytest
       env:
-        pythonLocation: /opt/hostedtoolcache/Python/3.12.0/x64
-        LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.0/x64/lib
+        pythonLocation: /opt/hostedtoolcache/Python/3.9.19/x64
+        LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.19/x64/lib
