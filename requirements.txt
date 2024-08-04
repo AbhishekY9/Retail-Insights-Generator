@@ -9,3 +9,6 @@ faiss-cpu
 pymysql
 sentence-transformers
 chromadb
+tiktoken
+protobuf
+mysql-connector-python
