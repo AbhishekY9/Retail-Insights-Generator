@@ -1,35 +1,34 @@
-name: CI
+name: CI Workflow
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
 
-      - name: Install Dependencies
-        run: |
-          # Update package list
-          sudo apt-get update
-          
-          # Remove any existing SQLite versions
-          sudo apt-get remove -y sqlite3 libsqlite3-dev
-          
-          # Install dependencies required for SQLite build
-          sudo apt-get install -y wget build-essential
+    - name: Install SQLite3 Development Libraries
+      run: sudo apt-get install -y sqlite3 libsqlite3-dev
 
-          # Download and install the latest SQLite version
-          wget https://www.sqlite.org/2024/sqlite-autoconf-3390200.tar.gz
-          tar xzf sqlite-autoconf-3390200.tar.gz
-          cd sqlite-autoconf-3390200
-          ./configure
-          make
-          sudo make install
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run tests
+      run: |
+        pytest
