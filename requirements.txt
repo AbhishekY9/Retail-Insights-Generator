@@ -1,9 +1,6 @@
-langchain
-langchain-core
 langchain-community
 langchain-experimental
 huggingface-hub
-chromadb
 google-generativeai
 sentence-transformers
 python-dotenv
@@ -13,3 +10,6 @@ faiss-cpu
 protobuf
 mysql-connector-python
 pymysql
+langchain==0.0.284
+langchain-core==0.2.28
+chromadb==0.2.5  # Example version, replace with the one you're using
