@@ -20,10 +20,10 @@ if "GOOGLE_API_KEY" not in os.environ:
 
 
 def get_few_shot_db_chain():
-    db_user = "root"
-    db_password = "123456"
-    db_host = "localhost"
-    db_name = "retail_insights_data"
+    db_user = "sql12723901"
+    db_password = "YsCnmTnKLW"
+    db_host = "sql12.freesqldatabase.com"
+    db_name = "sql12723901"
  
     # Connect to the database
     db_uri = f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}"
