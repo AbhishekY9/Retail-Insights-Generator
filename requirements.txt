@@ -1,7 +1,7 @@
-langchain==0.0.283  # Adjusted to match langchain-core
-langchain-core==0.2.27
-langchain-community==0.0.1  # Use the latest compatible version
-langchain-experimental==0.0.1  # Use the latest compatible version
+langchain==0.0.282  # Compatible version based on constraints
+langchain-core==0.2.26  # Compatible version based on constraints
+langchain-community==0.0.1  # Ensure compatibility
+langchain-experimental==0.0.1  # Ensure compatibility
 huggingface-hub
 chromadb
 google-generativeai
