@@ -20,10 +20,10 @@ jobs:
 
       - name: Download and install latest sqlite3
         run: |
-          wget https://www.sqlite.org/2024/sqlite-autoconf-3410000.tar.gz
-          tar xzf sqlite-autoconf-3410000.tar.gz
-          cd sqlite-autoconf-3410000
-          ./configure 
+          wget https://www.sqlite.org/2023/sqlite-autoconf-3390000.tar.gz
+          tar xzf sqlite-autoconf-3390000.tar.gz
+          cd sqlite-autoconf-3390000
+          ./configure
           make
           sudo make install
 
