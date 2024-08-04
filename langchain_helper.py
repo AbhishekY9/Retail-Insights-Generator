@@ -15,19 +15,19 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-# Ensure the environment variable is loaded
+# Ensure the environment variables are loaded
 google_api_key = os.getenv("GOOGLE_API_KEY")
-if not google_api_key:
-    st.error("GOOGLE_API_KEY not found in environment variables.")
+db_user = os.getenv("MYSQL_DB_USER")
+db_password = os.getenv("MYSQL_DB_PASSWORD")
+db_host = os.getenv("MYSQL_DB_HOST")
+db_name = os.getenv("MYSQL_DB_NAME")
+
+if not google_api_key or not db_user or not db_password or not db_host or not db_name:
+    st.error("Environment variables not found.")
     st.stop()
 
 @st.cache_resource
 def get_few_shot_db_chain():
-    db_user = "root"
-    db_password = "123456"
-    db_host = "localhost"
-    db_name = "retail_insights_data"
-
     # Connect to the database
     db_uri = f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}"
     db = SQLDatabase.from_uri(db_uri, sample_rows_in_table_info=3)
