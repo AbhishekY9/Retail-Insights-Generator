@@ -8,3 +8,4 @@ huggingface-hub
 chromadb
 python-dotenv
 pymysql
+google-generativeai
