@@ -9,3 +9,4 @@ chromadb
 python-dotenv
 pymysql
 google-generativeai
+sentence-transformers
