@@ -12,3 +12,4 @@ chromadb
 tiktoken
 protobuf
 mysql-connector-python
+google-generativeai
