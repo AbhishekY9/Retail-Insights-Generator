@@ -1,4 +1,3 @@
-import streamlit as st
 from langchain_community.llms import GooglePalm
 from langchain_community.utilities import SQLDatabase
 from langchain_experimental.sql import SQLDatabaseChain
@@ -12,28 +11,25 @@ from few_shots import few_shots
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
+load_dotenv()  # Load environment variables from .env
 
-# Ensure the environment variables are loaded
-google_api_key = os.getenv("GOOGLE_API_KEY")
-db_user = "sql12723901"
-db_password = "YsCnmTnKLW"
-db_host = "sql12.freesqldatabase.com"
-db_name = "sql12723901"
+# Ensure the environment variable is loaded
+if "GOOGLE_API_KEY" not in os.environ:
+    raise EnvironmentError("GOOGLE_API_KEY not found in environment variables.")
 
-if not google_api_key or not db_user or not db_password or not db_host or not db_name:
-    st.error("Environment variables not found.")
-    st.stop()
 
-@st.cache_resource
 def get_few_shot_db_chain():
+    db_user = "root"
+    db_password = "123456"
+    db_host = "localhost"
+    db_name = "retail_insights_data"
+
     # Connect to the database
     db_uri = f"mysql+pymysql://{db_user}:{db_password}@{db_host}/{db_name}"
     db = SQLDatabase.from_uri(db_uri, sample_rows_in_table_info=3)
 
     # Initialize the language model
-    llm = GooglePalm(google_api_key=google_api_key, temperature=0.1)
+    llm = GooglePalm(google_api_key=os.environ["GOOGLE_API_KEY"], temperature=0.1)
 
     # Initialize embeddings and vectorstore
     embeddings = HuggingFaceEmbeddings(model_name='sentence-transformers/all-MiniLM-L6-v2')
@@ -81,23 +77,3 @@ def get_few_shot_db_chain():
     # Create the SQLDatabaseChain
     chain = SQLDatabaseChain.from_llm(llm, db, verbose=True, prompt=few_shot_prompt)
     return chain
-
-# Example usage in a Streamlit app
-def main():
-    st.title("Retail Insights Generator")
-
-    # Display the form to take input from the user
-    user_query = st.text_input("Enter your question:")
-    if st.button("Generate Insights"):
-        if user_query:
-            try:
-                chain = get_few_shot_db_chain()
-                result = chain.run(input=user_query)
-                st.write(result)
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
-        else:
-            st.warning("Please enter a question.")
-
-if __name__ == "__main__":
-    main()
