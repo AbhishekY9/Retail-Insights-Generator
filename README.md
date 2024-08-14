@@ -79,5 +79,7 @@ Real-time Interaction: Access the system via a web app and get instant answers.
 * .env: Configuration file for storing your Google API key.
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+<img src="https://github.com/AbhishekY9/Retail-Insights-Generator/blob/main/fig/Screenshot_1.png" alt="App Screenshot" width="650">
+<img src="https://github.com/AbhishekY9/Retail-Insights-Generator/blob/main/fig/Screenshot_2.png" alt="App Screenshot" width="650">
+<img src="https://github.com/AbhishekY9/Retail-Insights-Generator/blob/main/fig/Screenshot_3.png" alt="App Screenshot" width="650">
+<img src="https://github.com/AbhishekY9/Retail-Insights-Generator/blob/main/fig/Screenshot_4.png" alt="App Screenshot" width="650">
