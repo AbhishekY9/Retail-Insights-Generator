@@ -37,24 +37,24 @@ Real-time Interaction: Access the system via a web app and get instant answers.
 
 1. Clone the repository:
 
-       git clone https://github.com/your-username/dreamwear-tshirts-qa.git
+       git clone https://github.com/AbhishekY9/Retail-Insights-Generator.git
 
 2. Navigate to the project directory:
 
-    cd dreamwear-tshirts-qa
+       cd Retail-Insights-Generator
 
 3. Install the required Python packages:
 
-    pip install -r requirements.txt
+       pip install -r requirements.txt
 
 4. Set up your environment variables by creating a .env file and adding your Google API key:
 
 
-    GOOGLE_API_KEY=your_google_api_key_here
+       GOOGLE_API_KEY=your_google_api_key_here
 
 5. Launch the Streamlit app:
 
-    streamlit run main.py
+       streamlit run main.py
 
 6. Open your browser and start asking questions about your inventory, sales, and more.
 ## Sample Questions
