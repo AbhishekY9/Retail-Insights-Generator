@@ -37,7 +37,7 @@ Real-time Interaction: Access the system via a web app and get instant answers.
 
 1. Clone the repository:
 
-    git clone https://github.com/your-username/dreamwear-tshirts-qa.git
+     git clone https://github.com/your-username/dreamwear-tshirts-qa.git
 
 2. Navigate to the project directory:
 
