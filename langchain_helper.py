@@ -21,7 +21,7 @@ if "GOOGLE_API_KEY" not in os.environ:
 
 
 def get_few_shot_db_chain():
-    MYSQL_DB_USER=os.environ.get("GOOGLE_API_KEY")
+    MYSQL_DB_USER=os.environ.get("MYSQL_DB_USER")
     MYSQL_DB_PASSWORD=os.environ.get("MYSQL_DB_PASSWORD")
     MYSQL_DB_HOST=os.environ.get("MYSQL_DB_HOST")
     MYSQL_DB_NAME=os.environ.get("MYSQL_DB_NAME")
