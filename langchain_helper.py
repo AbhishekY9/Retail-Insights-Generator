@@ -17,7 +17,6 @@ load_dotenv()  # Load environment variables from .env
 
 # Ensure the environment variable is loaded
 if "GOOGLE_API_KEY" not in os.environ:
-    print(234)
     raise EnvironmentError("GOOGLE_API_KEY not found in environment variables.")
 
 
