@@ -14,7 +14,7 @@ This project leverages advanced language models and machine learning techniques 
 
 **Technologies:**
 
-*Google Palm LLM:* For natural language understanding
+*GoogleGenerativeAI LLM:* For natural language understanding
 
 *Hugging Face embeddings:* For embedding text queries
     
